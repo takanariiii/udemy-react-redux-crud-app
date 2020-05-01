@@ -9,6 +9,6 @@ export default (state = initialState, action) => {
         case DECREMENT:
             return { value: state.value - 1 }
         default:
-            return { value: state.value }
+            return state
     }
 }

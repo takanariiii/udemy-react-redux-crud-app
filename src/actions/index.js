@@ -1,5 +1,5 @@
-export const INCREMENT = 'INCREMEMT'
-export const DECREMENT = 'DECREMEMT'
+export const INCREMENT = 'INCREMENT'
+export const DECREMENT = 'DECREMENT'
 
 export const increment = () => ({
     type: 'INCREMENT'
