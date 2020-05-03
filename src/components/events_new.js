@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import { Field, reduxForm } from 'redux-form'
+import { Field, reduxForm, isInvalid } from 'redux-form'
 import { Link } from 'react-router-dom'
 
 import { postEvent } from '../actions'
@@ -39,7 +39,7 @@ class EventsNew extends Component {
           <Field label="Body" name="body" type="text" component={this.renderField} />
         </div>
         <div>
-          <input type="submit" value="Submit" disabled={pristine || submitting} />
+          <input type="submit" value="Submit" disabled={pristine || submitting || isInvalid} />
           <Link to="/" >Cancel</Link>
         </div>
       </form>
